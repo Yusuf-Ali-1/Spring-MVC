@@ -25,13 +25,26 @@ throwing errors when we use the th namespace, this is how we declare the namespa
 <!--</ul>-->
 
 
-<ol th:each="book : ${books}">
+<ul th:each="book : ${books}">
     <li>
         <span th:text="${book.title}"></span>
         <span th:text="${book.author}"></span>
 
     </li>
-</ol>
+</ul>
+
+<!-- Example of
+${...} : Variable expressions.
+*{...} : Selection expressions.
+#{...} : Message (i18n) expressions.
+@{...} : Link (URL) expressions.
+~{...} : Fragment expressions.-->
+
+<form th:action="@{/createOrder}"> </form>
+<input type="button" th:value="#{form.submit}" />
+<a th:href="@{/admin/users}">
+
+
 
 </body>
 </html>
