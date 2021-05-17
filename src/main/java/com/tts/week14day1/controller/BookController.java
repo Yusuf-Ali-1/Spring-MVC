@@ -17,7 +17,7 @@ public class BookController {
                 new Book(2l, "title two", "author two")
         );
         model.addAttribute("books", bookList);
-        return "greeting";
+        return "home/greeting";
     }
 
 
