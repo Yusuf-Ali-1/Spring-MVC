@@ -22,6 +22,8 @@ public class GreetingController {
 
         // since this method is used to resolve a template
         // we do not say @ResponseBody
+        // take note that @GetMapping is the same thing as saying
+        // @RequestMapping(value ="/getting", method = RequestMethod.Get)
         @GetMapping("/greeting")
         public String greeting() {
             return "greeting";
