@@ -41,6 +41,19 @@ public class GreetingController {
 
 
 
+    // the request param here is not considered part of your  endpoint
+    // think of it more as an extension of your endpoint
+    @GetMapping("/greeting/param/")
+    @ResponseBody
+    public String greetingWithParam(@RequestParam(name="name",
+            required = false,
+            defaultValue="World") String name) {
+        return "hello there, " + name;
+    }
+
+
+
+
 }
 
 
