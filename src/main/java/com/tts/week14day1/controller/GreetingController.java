@@ -31,7 +31,10 @@ public class GreetingController {
     // this method will only work with our HTML files in the templates folder
 
     @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    public String greeting(@RequestParam(name="name",
+            required = false,
+            defaultValue="World") String name, Model model) {
+        model.addAttribute("randomValue", 452352L);
         model.addAttribute("name", name);
         return "greeting";
     }
