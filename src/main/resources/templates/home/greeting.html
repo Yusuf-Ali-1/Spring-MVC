@@ -18,8 +18,20 @@ throwing errors when we use the th namespace, this is how we declare the namespa
 <!-- Where #{msg.welcome} is our message expression  -->
 <p th:text="#{msg.welcome}">Welcome everyone!</p>
 
-<ul th:each="book : ${books}">
-<li th:each="book : ${books}" th:text="${book.title}">Book title</li>
-</ul>
+<!--&lt;!&ndash; th:each is acting like an enhanced for loop &ndash;&gt;-->
+<!--<ul th:each="book : ${books}">-->
+<!--<li th:each="book : ${books}" th:text="${book.title}">Book title</li>-->
+<!--<li th:each="book : ${books}" th:text="${book.author}">Book author</li>-->
+<!--</ul>-->
+
+
+<ol th:each="book : ${books}">
+    <li>
+        <span th:text="${book.title}"></span>
+        <span th:text="${book.author}"></span>
+
+    </li>
+</ol>
+
 </body>
 </html>
