@@ -27,6 +27,9 @@ public class GreetingController {
         // @RequestMapping(value ="/getting", method = RequestMethod.Get)
 
     //add @GetMapping annotation for /greeting
+    // please remember that without the @ResponseBody
+    // this method will only work with our HTML files in the templates folder
+
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
