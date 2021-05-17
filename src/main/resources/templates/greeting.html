@@ -8,6 +8,10 @@ throwing errors when we use the th namespace, this is how we declare the namespa
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<!-- thymeleaf refers to our model attribute as a context variable -->
+<!-- basically anything that looks like ${} can be representative of data in your application -->
+<!-- this is very similar to javascript template literals and Java formats -->
+
 <p th:text="'Hello, ' + ${name} + '!'" />
 </body>
 </html>
