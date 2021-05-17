@@ -24,11 +24,13 @@ public class GreetingController {
         // we do not say @ResponseBody
         // take note that @GetMapping is the same thing as saying
         // @RequestMapping(value ="/getting", method = RequestMethod.Get)
-        @GetMapping("/greeting")
-        public String greeting() {
-            return "greeting";
-        }
 
+    //add @GetMapping annotation for /greeting
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }
 
     }
 
