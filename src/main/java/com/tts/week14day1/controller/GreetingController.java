@@ -1,11 +1,9 @@
 package com.tts.week14day1.controller;
 
+import com.tts.week14day1.model.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 //add @Controller annotation
 @Controller
@@ -56,6 +54,12 @@ public class GreetingController {
             defaultValue="World") String name) {
         return "hello there, " + name;
     }
+
+//    @GetMapping("/greeting")
+//    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
+//        model.addAttribute("greeting", greeting);
+//        return "result";
+//    }
 
 
 
