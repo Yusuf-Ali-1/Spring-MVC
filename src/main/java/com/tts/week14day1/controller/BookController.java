@@ -27,7 +27,7 @@ public class BookController {
         return "This is an endpoint!";
     }
 
-//    This takes precedence the root
+//    This takes precedence as the root
 //    @GetMapping("/")
 //    @ResponseBody
 //    public String root(){
