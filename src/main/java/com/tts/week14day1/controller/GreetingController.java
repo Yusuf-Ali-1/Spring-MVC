@@ -36,26 +36,26 @@ public class GreetingController {
             defaultValue="World") String name, Model model) {
         model.addAttribute("randomValue", 452352L);
         model.addAttribute("name", name);
-        return "greeting";
+        return "home/greeting";
     }
 
-    @GetMapping("/greeting/var/{name}")
-    @ResponseBody
-    public String greetingWithPathVar(@PathVariable String name){
-            return "Hello there, " + name;
-    }
-
-
-
-    // the request param here is not considered part of your  endpoint
-    // think of it more as an extension of your endpoint
-    @GetMapping("/greeting/param/")
-    @ResponseBody
-    public String greetingWithParam(@RequestParam(name="name",
-            required = false,
-            defaultValue="World") String name) {
-        return "hello there, " + name;
-    }
+//    @GetMapping("/greeting/var/{name}")
+//    @ResponseBody
+//    public String greetingWithPathVar(@PathVariable String name){
+//            return "Hello there, " + name;
+//    }
+//
+//
+//
+//    // the request param here is not considered part of your  endpoint
+//    // think of it more as an extension of your endpoint
+//    @GetMapping("/greeting/param/")
+//    @ResponseBody
+//    public String greetingWithParam(@RequestParam(name="name",
+//            required = false,
+//            defaultValue="World") String name) {
+//        return "hello there, " + name;
+//    }
 
 
 
