@@ -55,11 +55,6 @@ public class GreetingController {
         return "hello there, " + name;
     }
 
-//    @GetMapping("/greeting")
-//    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-//        model.addAttribute("greeting", greeting);
-//        return "result";
-//    }
 
 
 
