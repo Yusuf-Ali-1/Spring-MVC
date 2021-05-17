@@ -14,5 +14,11 @@ throwing errors when we use the th namespace, this is how we declare the namespa
 <!-- this is very similar to javascript template literals and Java formats -->
 
 <p th:text="'Hello, ' + ${name} + '!'" />
+
+<!-- Where #{msg.welcome} is our message expression  -->
+<p th:text="#{msg.welcome}">Welcome everyone!</p>
+
+
+<li th:each="book : ${books}" th:text="${book.title}">En las Orillas del Sar</li>
 </body>
 </html>
